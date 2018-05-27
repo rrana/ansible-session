@@ -1,0 +1,15 @@
+---
+- name: Playbook to test ansible task
+  hosts: rana-laptop
+  user: "ubuntu"
+  become: True
+
+
+  vars:
+    setup_git: True
+
+  pre_tasks:
+    - debug: msg="hello world!"
+    
+  roles:
+    - git
